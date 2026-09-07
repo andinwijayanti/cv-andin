@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andin Putri Wijayanti - Portofolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepNavy: '#080E21',
+                        navyCard: '#0F1836',
+                        champagneGold: '#D4AF37',
+                        champagneLight: '#F3E5AB',
+                        ivory: '#FAF9F5',
+                        warmWhite: '#FFFFFF',
+                        taupe: '#64687A',
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 35px -5px rgba(212, 175, 55, 0.25)',
+                        'card-hover': '0 20px 40px -15px rgba(8, 14, 33, 0.12)',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out 3s infinite',
+                        'pulse-glow': 'pulseGlow 3s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { opacity: '0.4' },
+                            '50%': { opacity: '0.8' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        ::selection {
+            background-color: #D4AF37;
+            color: #080E21;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF9F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #080E21;
+        }
+        .bg-mesh {
+            background-image: radial-gradient(rgba(212, 175, 55, 0.12) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .glass-dark {
+            background: rgba(15, 24, 54, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-ivory text-deepNavy font-sans antialiased selection:bg-champagneGold selection:text-deepNavy relative">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-warmWhite/80 backdrop-blur-lg z-50 border-b border-champagneGold/20 shadow-xs transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 h-20 flex items-center justify-between">
+            <!-- Logo / Name Brand -->
+            <a href="#home" class="font-heading font-bold text-xl sm:text-2xl tracking-wider text-deepNavy hover:text-champagneGold transition-all flex items-center gap-2.5 group">
+                <span class="w-3 h-3 rounded-full bg-champagneGold group-hover:scale-125 transition-transform duration-300 shadow-glow"></span>
+                <span class="tracking-widest">ANDIN PUTRI W.</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden xl:flex items-center space-x-8 text-xs font-bold tracking-widest text-deepNavy uppercase">
+                <a href="#home" class="hover:text-champagneGold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-champagneGold hover:after:w-full after:transition-all">Home</a>
+                <a href="#about" class="hover:text-champagneGold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-champagneGold hover:after:w-full after:transition-all">About</a>
+                <a href="#skills" class="hover:text-champagneGold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-champagneGold hover:after:w-full after:transition-all">Skills</a>
+                <a href="#education" class="hover:text-champagneGold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-champagneGold hover:after:w-full after:transition-all">Education</a>
+                <a href="#experience" class="hover:text-champagneGold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-champagneGold hover:after:w-full after:transition-all">Experience</a>
+                <a href="#projects" class="hover:text-champagneGold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-champagneGold hover:after:w-full after:transition-all">Projects</a>
+                <a href="#contact" class="hover:text-champagneGold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-champagneGold hover:after:w-full after:transition-all">Contact</a>
+                <a href="#contact" class="bg-deepNavy text-warmWhite border border-champagneGold/50 px-6 py-2.5 rounded-full tracking-widest hover:bg-champagneGold hover:text-deepNavy hover:shadow-glow transition-all duration-300">
+                    Download CV
+                </a>
+            </div>
+
+            <!-- Hamburger Button for Mobile -->
+            <div class="xl:hidden flex items-center">
+                <button id="menu-btn" aria-label="Toggle menu" class="text-deepNavy focus:outline-none p-2">
+                    <i class="fa-solid fa-bars-staggered text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-warmWhite/95 backdrop-blur-xl border-b border-champagneGold/20 px-6 py-6 space-y-4 shadow-2xl">
+            <a href="#home" class="mobile-link block py-1.5 hover:text-champagneGold transition-colors font-semibold text-sm">Home</a>
+            <a href="#about" class="mobile-link block py-1.5 hover:text-champagneGold transition-colors font-semibold text-sm">About</a>
+            <a href="#skills" class="mobile-link block py-1.5 hover:text-champagneGold transition-colors font-semibold text-sm">Skills</a>
+            <a href="#education" class="mobile-link block py-1.5 hover:text-champagneGold transition-colors font-semibold text-sm">Education</a>
+            <a href="#experience" class="mobile-link block py-1.5 hover:text-champagneGold transition-colors font-semibold text-sm">Experience</a>
+            <a href="#projects" class="mobile-link block py-1.5 hover:text-champagneGold transition-colors font-semibold text-sm">Projects</a>
+            <a href="#contact" class="mobile-link block py-1.5 hover:text-champagneGold transition-colors font-semibold text-sm">Contact</a>
+            <div class="pt-2">
+                <a href="#contact" class="mobile-link inline-block w-full text-center bg-deepNavy text-warmWhite border border-champagneGold/40 px-5 py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-champagneGold hover:text-deepNavy transition-all">
+                    Download CV
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Beranda / Hero -->
+    <section id="home" class="pt-32 sm:pt-44 pb-20 sm:pb-32 bg-ivory bg-mesh relative overflow-hidden">
+        <!-- Ambient Glowing Orbs -->
+        <div class="absolute top-1/4 left-10 w-72 h-72 bg-champagneGold/20 rounded-full blur-3xl animate-pulse-glow pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-deepNavy/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Text Intro -->
+                <div class="lg:col-span-7 space-y-7 text-left">
+                    <div class="inline-flex items-center space-x-2.5 bg-warmWhite/90 border border-champagneGold/40 px-4 py-2 rounded-full shadow-xs backdrop-blur-sm">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                        <span class="text-xs font-bold tracking-widest uppercase text-taupe">Available for Hire & Projects</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight font-heading text-deepNavy leading-[1.1]">
+                        Halo, Saya <br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-champagneGold via-yellow-600 to-amber-700 italic font-serif">Andin Putri</span> Wijayanti
+                    </h1>
+
+                    <p class="text-base sm:text-xl text-taupe font-normal leading-relaxed max-w-2xl">
+                        Seorang Web Developer & UI/UX Designer yang bersemangat menciptakan website modern, responsif, dan mudah digunakan. Memiliki ketertarikan dalam desain antarmuka, pengembangan web, serta menciptakan pengalaman digital yang menarik dan fungsional.
+                    </p>
+
+                    <div class="pt-2 flex flex-wrap gap-4 items-center">
+                        <a href="#projects" class="bg-deepNavy text-warmWhite px-8 py-4 rounded-full text-xs font-bold tracking-widest uppercase border border-deepNavy hover:bg-champagneGold hover:text-deepNavy hover:border-champagneGold hover:shadow-glow transition-all duration-300 shadow-md transform hover:-translate-y-0.5">
+                            View My Work <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                        <a href="#contact" class="bg-warmWhite text-deepNavy px-8 py-4 rounded-full text-xs font-bold tracking-widest uppercase border border-champagneGold/50 hover:bg-ivory hover:border-champagneGold transition-all duration-300 shadow-xs">
+                            Get In Touch
+                        </a>
+                    </div>
+
+                    <!-- Social Icons -->
+                    <div class="pt-6 flex items-center space-x-4 border-t border-champagneGold/20 max-w-md">
+                        
+                    </div>
+                </div>
+
+                <!-- Hero Image Card with Interactive Floating Badges -->
+                <div class="lg:col-span-5 flex justify-center relative">
+                    <div class="relative w-full max-w-md">
+                        
+                        <!-- Floating Badge 1: Top Left -->
+                        <div class="absolute -top-6 -left-6 z-20 glass-card p-3.5 rounded-2xl shadow-xl flex items-center space-x-3 animate-float border border-champagneGold/40 hidden sm:flex">
+                            <div class="w-10 h-10 rounded-xl bg-champagneGold/20 flex items-center justify-center text-champagneGold">
+                                <i class="fa-solid fa-figma text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-deepNavy">Figma Expert</p>
+                                <p class="text-[10px] text-taupe">Design Systems & UI</p>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge 2: Bottom Right -->
+                        <div class="absolute -bottom-6 -right-6 z-20 glass-card p-3.5 rounded-2xl shadow-xl flex items-center space-x-3 animate-float-delayed border border-champagneGold/40 hidden sm:flex">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-600">
+                                <i class="fa-solid fa-code text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-deepNavy">Clean Code</p>
+                                <p class="text-[10px] text-taupe">Tailwind & React Ready</p>
+                            </div>
+                        </div>
+
+                        <!-- Glow Backdrop -->
+                        <div class="absolute -inset-2 bg-gradient-to-tr from-champagneGold via-amber-400 to-deepNavy rounded-[2.5rem] blur-xl opacity-30 animate-pulse-glow"></div>
+                        
+                        <div class="relative bg-warmWhite p-4 rounded-[2.2rem] border border-champagneGold/40 shadow-2xl overflow-hidden group">
+                            <img src="ft cv.png" 
+                                 alt="Andin Putri Wijayanti" 
+                                 class="w-full h-96 sm:h-[440px] object-cover rounded-[1.8rem] filter saturate-[0.95] group-hover:scale-105 transition-all duration-700">
+                            
+                            <div class="mt-4 p-3.5 bg-ivory/90 rounded-2xl border border-champagneGold/20 flex items-center justify-between">
+                                <div>
+                                    <p class="text-xs font-bold text-deepNavy">UX Research & Interface Design</p>
+                                    <p class="text-[11px] text-taupe">Crafting Seamless Digital Interactions</p>
+                                </div>
+                                <span class="w-9 h-9 rounded-full bg-champagneGold/20 text-champagneGold flex items-center justify-center shadow-xs">
+                                    <i class="fa-solid fa-wand-magic-sparkles text-sm"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section About -->
+    <section id="about" class="py-20 sm:py-28 bg-warmWhite border-t border-b border-champagneGold/20 relative">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+                <span class="text-xs font-extrabold tracking-widest uppercase text-champagneGold">Discover My Story</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-heading text-deepNavy">ABOUT ME</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-champagneGold to-amber-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6 text-taupe leading-relaxed font-normal text-base">
+                    <p>
+                        Saya adalah seorang profesional muda yang berdedikasi tinggi di bidang desain antarmuka pengguna (UI/UX) dan pengembangan web *front-end*. Memiliki passion mendalam untuk memecahkan masalah kompleks melalui desain yang estetis, fungsional, serta mengutamakan kenyamanan pengguna.
+                    </p>
+                    <p>
+                        Dengan menggabungkan prinsip *Design Thinking* dan efisiensi pengkodean front-end modern, saya selalu memastikan setiap produk digital tidak hanya menarik secara visual tetapi juga intuitif dan dapat diakses dengan cepat.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 pt-4">
+                        <div class="p-5 bg-ivory rounded-2xl border border-champagneGold/30 shadow-xs hover:border-champagneGold transition-all">
+                            <p class="text-3xl font-extrabold text-deepNavy font-heading">3 Tahun</p>
+                            <p class="text-xs text-taupe font-semibold uppercase tracking-wider mt-1">Pengalaman Visual & UX</p>
+                        </div>
+                        <div class="p-5 bg-ivory rounded-2xl border border-champagneGold/30 shadow-xs hover:border-champagneGold transition-all">
+                            <p class="text-3xl font-extrabold text-deepNavy font-heading">6 Proyek</p>
+                            <p class="text-xs text-taupe font-semibold uppercase tracking-wider mt-1">Selesai Ditangani</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Information Grid Card -->
+                <div class="lg:col-span-6 glass-card p-8 sm:p-10 rounded-3xl border border-champagneGold/40 shadow-card-hover space-y-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-champagneGold/10 rounded-bl-full pointer-events-none"></div>
+
+                    <h3 class="font-heading font-bold text-2xl text-deepNavy border-b border-champagneGold/20 pb-4 flex items-center justify-between">
+                        Personal Details
+                        <i class="fa-solid fa-address-card text-champagneGold text-lg"></i>
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 text-sm">
+                        <div class="p-3 bg-warmWhite/80 rounded-xl border border-champagneGold/20">
+                            <span class="text-[10px] text-taupe block font-bold uppercase tracking-wider">Nama Lengkap</span>
+                            <span class="text-deepNavy font-bold">Andin Putri Wijayanti</span>
+                        </div>
+                        <div class="p-3 bg-warmWhite/80 rounded-xl border border-champagneGold/20">
+                            <span class="text-[10px] text-taupe block font-bold uppercase tracking-wider">Email</span>
+                            <span class="text-deepNavy font-bold">andinwijayanti791@gmail.com</span>
+                        </div>
+                        <div class="p-3 bg-warmWhite/80 rounded-xl border border-champagneGold/20">
+                            <span class="text-[10px] text-taupe block font-bold uppercase tracking-wider">Lokasi</span>
+                            <span class="text-deepNavy font-bold">Jl Krakal RT 03 RW 04 Kec Wlingi Kab Blitar </span>
+                        </div>
+                        <div class="p-3 bg-warmWhite/80 rounded-xl border border-champagneGold/20">
+                            <span class="text-[10px] text-taupe block font-bold uppercase tracking-wider">Spesialisasi</span>
+                            <span class="text-deepNavy font-bold">UI/UX Design & Front-End</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-champagneGold/20 flex items-center space-x-3 text-xs text-deepNavy font-semibold">
+                        <span class="w-6 h-6 rounded-full bg-champagneGold/20 text-champagneGold flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-circle-check text-xs"></i>
+                        </span>
+                        <span>Siap bekerja secara full-time, part-time, atau proyek freelance.</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section Skills -->
+    <section id="skills" class="py-20 sm:py-28 bg-ivory">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+                <span class="text-xs font-extrabold tracking-widest uppercase text-champagneGold">Capabilities & Tools</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-heading text-deepNavy">SKILLS & EXPERTISE</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-champagneGold to-amber-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Skill Category 1 -->
+                <div class="bg-warmWhite p-8 rounded-3xl border border-champagneGold/30 shadow-xs hover:shadow-card-hover hover:border-champagneGold transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-ivory border border-champagneGold/30 flex items-center justify-center text-champagneGold mb-6 group-hover:scale-110 group-hover:bg-champagneGold group-hover:text-deepNavy transition-all duration-300 shadow-xs">
+                        <i class="fa-solid fa-palette text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-2xl text-deepNavy mb-3">UI/UX Design</h3>
+                    <p class="text-taupe text-xs leading-relaxed mb-6">Merancang antarmuka visual yang modern, konsisten, serta sistematis untuk aplikasi web dan mobile.</p>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-ivory border border-champagneGold/30 px-3.5 py-1.5 rounded-full font-bold text-deepNavy">Figma</span>
+                        <span class="text-xs bg-ivory border border-champagneGold/30 px-3.5 py-1.5 rounded-full font-bold text-deepNavy">Wireframing</span>
+                        <span class="text-xs bg-ivory border border-champagneGold/30 px-3.5 py-1.5 rounded-full font-bold text-deepNavy">Prototyping</span>
+                        <span class="text-xs bg-ivory border border-champagneGold/30 px-3.5 py-1.5 rounded-full font-bold text-deepNavy">Design Systems</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2 -->
+                <div class="bg-warmWhite p-8 rounded-3xl border border-champagneGold/30 shadow-xs hover:shadow-card-hover hover:border-champagneGold transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-ivory border border-champagneGold/30 flex items-center justify-center text-champagneGold mb-6 group-hover:scale-110 group-hover:bg-champagneGold group-hover:text-deepNavy transition-all duration-300 shadow-xs">
+                        <i class="fa-solid fa-code text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-2xl text-deepNavy mb-3">Front-End Development</h3>
+                    <p class="text-taupe text-xs leading-relaxed mb-6">Menerjemahkan desain visual ke dalam kode front-end yang bersih, responsif, dan interaktif.</p>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-ivory border border-champagneGold/30 px-3.5 py-1.5 rounded-full font-bold text-deepNavy">HTML</span>
+                        <span class="text-xs bg-ivory border border-champagneGold/30 px-3.5 py-1.5 rounded-full font-bold text-deepNavy">CSS</span>
+                        <span class="text-xs bg-ivory border border-champagneGold/30 px-3.5 py-1.5 rounded-full font-bold text-deepNavy">JavaScript</span>
+                        <span class="text-xs bg-ivory border border-champagneGold/30 px-3.5 py-1.5 rounded-full font-bold text-deepNavy">Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3 -->
+                <div class="bg-warmWhite p-8 rounded-3xl border border-champagneGold/30 shadow-xs hover:shadow-card-hover hover:border-champagneGold transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-ivory border border-champagneGold/30 flex items-center justify-center text-champagneGold mb-6 group-hover:scale-110 group-hover:bg-champagneGold group-hover:text-deepNavy transition-all duration-300 shadow-xs">
+                        <i class="fa-solid fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-2xl text-deepNavy mb-3">UX Research & Strategy</h3>
+                    <p class="text-taupe text-xs leading-relaxed mb-6">Menganalisis kebutuhan pengguna melalui riset terstruktur demi menciptakan solusi produk yang berorientasi pengguna.</p>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-ivory border border-champagneGold/30 px-3.5 py-1.5 rounded-full font-bold text-deepNavy">User Persona</span>
+                        <span class="text-xs bg-ivory border border-champagneGold/30 px-3.5 py-1.5 rounded-full font-bold text-deepNavy">Journey Mapping</span>
+                        <span class="text-xs bg-ivory border border-champagneGold/30 px-3.5 py-1.5 rounded-full font-bold text-deepNavy">Usability Testing</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<!-- Section Education -->
+<section id="education" class="py-20 sm:py-28 bg-warmWhite border-t border-b border-champagneGold/20">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+
+        <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+            <span class="text-xs font-semibold tracking-widest uppercase text-champagneGold">Background</span>
+            <h2 class="text-3xl sm:text-5xl font-bold font-heading text-deepNavy">EDUCATION</h2>
+            <div class="w-12 h-0.5 bg-champagneGold mx-auto"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-8">
+
+            <!-- Education: SMA -->
+            <div class="bg-ivory p-8 rounded-2xl border border-champagneGold/30 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div>
+                    <span class="text-xs font-semibold text-champagneGold uppercase tracking-wider block mb-1">
+                        2023 - 2024
+                    </span>
+
+                    <h3 class="font-heading font-bold text-xl text-deepNavy">
+                        SMK PGRI WLINGI 
+                    </h3>
+
+                    <p class="text-taupe text-sm mt-1">
+                        Rekayasa Perangkat Lunak
+                    </p>
+                </div>
+
+                <span class="bg-warmWhite border border-champagneGold/30 text-deepNavy text-xs font-semibold px-4 py-2 rounded-full">
+                    Completed
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Section Experience -->
+    <section id="experience" class="py-20 sm:py-28 bg-ivory">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+                <span class="text-xs font-extrabold tracking-widest uppercase text-champagneGold">Professional Journey</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-heading text-deepNavy">EXPERIENCE</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-champagneGold to-amber-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto relative border-l-2 border-champagneGold/40 pl-6 sm:pl-10 space-y-12">
+                
+                <!-- Timeline Item 1 -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 rounded-full bg-champagneGold border-4 border-ivory group-hover:scale-125 transition-all duration-300 shadow-glow"></div>
+                    
+                    <div class="bg-warmWhite p-8 rounded-3xl border border-champagneGold/30 shadow-xs hover:shadow-card-hover transition-all duration-300 space-y-3">
+                        <div class="flex flex-wrap justify-between items-center gap-2">
+                            <h3 class="font-heading font-bold text-2xl text-deepNavy">UI/UX Designer Intern</h3>
+                            <span class="text-xs font-bold text-champagneGold bg-ivory border border-champagneGold/30 px-4 py-1.5 rounded-full">2023 - 2024</span>
+                        </div>
+                        <p class="text-xs font-bold text-taupe uppercase tracking-wider">Tech Studio Digital • Jakarta</p>
+                        <p class="text-taupe text-sm leading-relaxed font-normal">
+                            Mengembangkan *design system* perusahaan, melakukan pengujian aksesibilitas, serta memimpin redesain aplikasi mobile internal untuk meningkatkan keterlibatan pengguna sebesar 25%.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 rounded-full bg-champagneGold border-4 border-ivory group-hover:scale-125 transition-all duration-300 shadow-glow"></div>
+                    
+                    <div class="bg-warmWhite p-8 rounded-3xl border border-champagneGold/30 shadow-xs hover:shadow-card-hover transition-all duration-300 space-y-3">
+                        <div class="flex flex-wrap justify-between items-center gap-2">
+                            <h3 class="font-heading font-bold text-2xl text-deepNavy">Freelance Front-End Developer</h3>
+                            <span class="text-xs font-bold text-champagneGold bg-ivory border border-champagneGold/30 px-4 py-1.5 rounded-full">2022 - Sekarang</span>
+                        </div>
+                        <p class="text-xs font-bold text-taupe uppercase tracking-wider">Remote Projects</p>
+                        <p class="text-taupe text-sm leading-relaxed font-normal">
+                            Membangun landing page dan aplikasi web responsif untuk Klien UMKM, memastikan tampilan visual yang konsisten serta performa yang optimal di semua perangkat.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projects -->
+    <section id="projects" class="py-20 sm:py-28 bg-warmWhite border-t border-b border-champagneGold/20">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-12">
+                <span class="text-xs font-extrabold tracking-widest uppercase text-champagneGold">Selected Works</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-heading text-deepNavy">FEATURED PROJECTS</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-champagneGold to-amber-600 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Project Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button onclick="filterProjects('all')" class="filter-btn active-filter bg-deepNavy text-warmWhite border border-champagneGold/40 px-6 py-2.5 rounded-full text-xs font-bold tracking-widest uppercase transition-all shadow-xs" data-category="all">
+                    All Work
+                </button>
+                <button onclick="filterProjects('uiux')" class="filter-btn bg-ivory text-deepNavy border border-champagneGold/30 hover:border-champagneGold px-6 py-2.5 rounded-full text-xs font-bold tracking-widest uppercase transition-all" data-category="uiux">
+                    UI/UX Design
+                </button>
+                <button onclick="filterProjects('webapp')" class="filter-btn bg-ivory text-deepNavy border border-champagneGold/30 hover:border-champagneGold px-6 py-2.5 rounded-full text-xs font-bold tracking-widest uppercase transition-all" data-category="webapp">
+                    Web Apps
+                </button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: Mobile Banking App -->
+                <div class="project-card bg-ivory rounded-3xl overflow-hidden border border-champagneGold/30 shadow-xs hover:shadow-2xl hover:border-champagneGold transition-all duration-500 flex flex-col group" data-type="uiux">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="ft1.jpeg" alt="Mobile Banking App" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-deepNavy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        </div>
+                    </div>
+                    <div class="p-7 flex flex-col flex-grow justify-between">
+                        <div>
+                            <span class="text-[10px] font-extrabold text-champagneGold uppercase tracking-widest block mb-1">Fintech Mobile UI</span>
+                            <h3 class="font-heading font-bold text-2xl mb-2 text-deepNavy">Fashion Store</h3>
+                            <p class="text-taupe text-xs leading-relaxed mb-4 font-normal">Desain website fashion modern dengan tampilan elegan, minimalis, dan fokus pada visual produk serta pengalaman pengguna.</p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-[9px] uppercase tracking-wider bg-warmWhite border border-champagneGold/30 px-3 py-1 rounded-full text-deepNavy font-bold">UI/UX</span>
+                                <span class="text-[9px] uppercase tracking-wider bg-warmWhite border border-champagneGold/30 px-3 py-1 rounded-full text-deepNavy font-bold">Figma</span>
+                                <span class="text-[9px] uppercase tracking-wider bg-warmWhite border border-champagneGold/30 px-3 py-1 rounded-full text-deepNavy font-bold">Design System</span>
+                            </div>
+                            <button onclick="openModal('Mobile Banking App', 'Redesain sistem aplikasi perbankan digital untuk meningkatkan aksesibilitas dan kemudahan navigasi pengguna harian. Dilengkapi dengan design system terstruktur dan mode gelap.', 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800', ['Figma', 'UI/UX Research', 'Mobile Prototype', 'Usability Testing'])" class="w-full text-center bg-deepNavy text-warmWhite border border-champagneGold/40 py-3.5 rounded-2xl text-xs font-bold tracking-widest uppercase hover:bg-champagneGold hover:text-deepNavy transition-all shadow-xs">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: E-Learning Platform -->
+                <div class="project-card bg-ivory rounded-3xl overflow-hidden border border-champagneGold/30 shadow-xs hover:shadow-2xl hover:border-champagneGold transition-all duration-500 flex flex-col group" data-type="webapp">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="ft2.jpeg" alt="E-Learning Platform" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-deepNavy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        </div>
+                    </div>
+                    <div class="p-7 flex flex-col flex-grow justify-between">
+                        <div>
+                            <span class="text-[10px] font-extrabold text-champagneGold uppercase tracking-widest block mb-1">Web Platform</span>
+                            <h3 class="font-heading font-bold text-2xl mb-2 text-deepNavy">WEB APPLICATION</h3>
+                            <p class="text-taupe text-xs leading-relaxed mb-4 font-normal">Aplikasi vending machine berbasis web yang memungkinkan pengguna memilih minuman, melihat harga, dan melakukan pembelian dengan tampilan sederhana dan interaktif.</p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-[9px] uppercase tracking-wider bg-warmWhite border border-champagneGold/30 px-3 py-1 rounded-full text-deepNavy font-bold">Web App</span>
+                                <span class="text-[9px] uppercase tracking-wider bg-warmWhite border border-champagneGold/30 px-3 py-1 rounded-full text-deepNavy font-bold">Tailwind CSS</span>
+                                <span class="text-[9px] uppercase tracking-wider bg-warmWhite border border-champagneGold/30 px-3 py-1 rounded-full text-deepNavy font-bold">JavaScript</span>
+                            </div>
+                            <button onclick="openModal('E-Learning Dashboard', 'Dashboard pendidikan terintegrasi yang menyajikan analisis statistik progres belajar, manajemen materi interaktif, dan kalender tugas yang responsif di seluruh layar.', 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=800', ['HTML5', 'Tailwind CSS', 'JavaScript', 'Responsive Grid'])" class="w-full text-center bg-deepNavy text-warmWhite border border-champagneGold/40 py-3.5 rounded-2xl text-xs font-bold tracking-widest uppercase hover:bg-champagneGold hover:text-deepNavy transition-all shadow-xs">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Fashion Landing Page -->
+                <div class="project-card bg-ivory rounded-3xl overflow-hidden border border-champagneGold/30 shadow-xs hover:shadow-2xl hover:border-champagneGold transition-all duration-500 flex flex-col group" data-type="uiux">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="ft3.jpeg" alt="Fashion Landing Page" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-deepNavy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        </div>
+                    </div>
+                    <div class="p-7 flex flex-col flex-grow justify-between">
+                        <div>
+                            <span class="text-[10px] font-extrabold text-champagneGold uppercase tracking-widest block mb-1">E-Commerce Design</span>
+                            <h3 class="font-heading font-bold text-2xl mb-2 text-deepNavy">DATABASE DESIGN</h3>
+                            <p class="text-taupe text-xs leading-relaxed mb-4 font-normal">Perancangan database untuk sistem e-commerce fashion yang menggambarkan hubungan antara pelanggan, pesanan, produk, dan detail pesanan. ERD digunakan untuk mengatur data produk, transaksi, serta informasi pelanggan secara terstruktur.</p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-[9px] uppercase tracking-wider bg-warmWhite border border-champagneGold/30 px-3 py-1 rounded-full text-deepNavy font-bold">UI/UX</span>
+                                <span class="text-[9px] uppercase tracking-wider bg-warmWhite border border-champagneGold/30 px-3 py-1 rounded-full text-deepNavy font-bold">Figma</span>
+                                <span class="text-[9px] uppercase tracking-wider bg-warmWhite border border-champagneGold/30 px-3 py-1 rounded-full text-deepNavy font-bold">Landing Page</span>
+                            </div>
+                            <button onclick="openModal('Fashion Store UI', 'Pengembangan desain landing page mewah untuk e-commerce fashion lokal dengan tata letak visual berbasis grid editorial, mikro-interaksi elegan, dan sistem checkout mulus.', 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=800', ['Figma', 'Visual Layout', 'Branding', 'Prototyping'])" class="w-full text-center bg-deepNavy text-warmWhite border border-champagneGold/40 py-3.5 rounded-2xl text-xs font-bold tracking-widest uppercase hover:bg-champagneGold hover:text-deepNavy transition-all shadow-xs">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-20 sm:py-28 bg-deepNavy text-ivory relative overflow-hidden">
+        <!-- Ambient background glows -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-champagneGold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-7">
+                    <span class="text-xs font-extrabold tracking-widest uppercase text-champagneGold">Get In Touch</span>
+                    <h2 class="text-4xl sm:text-6xl font-bold tracking-tight font-heading text-warmWhite">LET'S CONNECT</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-champagneGold to-amber-500 rounded-full"></div>
+                    
+                    <p class="text-ivory/80 text-base leading-relaxed font-normal">
+                        "Punya ide proyek menarik, tawaran kerja sama, atau ingin berdiskusi lebih lanjut? Mari wujudkan solusi digital luar biasa bersama."
+                    </p>
+
+                    <div class="space-y-5 pt-2">
+                        <div class="flex items-center space-x-4 p-3 bg-navyCard/60 rounded-2xl border border-champagneGold/20 hover:border-champagneGold transition-all">
+                            <div class="w-12 h-12 rounded-xl border border-champagneGold/40 flex items-center justify-center text-champagneGold flex-shrink-0 bg-deepNavy">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <p class="text-[10px] text-champagneLight font-bold uppercase tracking-widest">Email Direct</p>
+                                <p class="text-sm font-bold text-warmWhite" id="email-text">andinwijayanti791@gmail.com</p>
+                            </div>
+                            <button onclick="copyEmail()" title="Copy Email" class="px-3 py-1.5 bg-champagneGold/20 hover:bg-champagneGold hover:text-deepNavy text-champagneLight text-xs rounded-lg transition-all font-bold">
+                                Copy
+                            </button>
+                        </div>
+
+                        <div class="flex items-center space-x-4 p-3 bg-navyCard/60 rounded-2xl border border-champagneGold/20 hover:border-champagneGold transition-all">
+                            <div class="w-12 h-12 rounded-xl border border-champagneGold/40 flex items-center justify-center text-champagneGold flex-shrink-0 bg-deepNavy">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-champagneLight font-bold uppercase tracking-widest">WhatsApp Direct</p>
+                                <p class="text-sm font-bold text-warmWhite">+62 851-1303-1394</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-4 pt-4">
+                        <a href="#" aria-label="GitHub" class="w-11 h-11 rounded-2xl border border-champagneGold/30 bg-navyCard text-champagneGold flex items-center justify-center hover:bg-champagneGold hover:text-deepNavy transition-all duration-300">
+                            <i class="fa-brands fa-github text-base"></i>
+                        </a>
+                        <a href="https://wa.me/6285113031394" aria-label="WhatsApp" class="w-11 h-11 rounded-2xl border border-champagneGold/30 bg-navyCard text-champagneGold flex items-center justify-center hover:bg-champagneGold hover:text-deepNavy transition-all duration-300">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 glass-card p-8 sm:p-12 rounded-3xl border border-champagneGold/40 shadow-2xl text-deepNavy">
+                    <form onsubmit="handleFormSubmit(event)" class="space-y-5">
+                        <div id="success-msg" class="hidden bg-emerald-50 text-emerald-800 p-4 rounded-2xl border border-emerald-300 text-xs font-bold flex items-center space-x-2">
+                            <i class="fa-solid fa-circle-check text-lg text-emerald-600"></i>
+                            <span>Pesan Anda berhasil terkirim! Terima kasih telah menghubungi saya.</span>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="text-xs font-bold uppercase tracking-wider block mb-1.5 text-deepNavy">Nama Lengkap</label>
+                                <input type="text" required placeholder="John Doe" class="w-full bg-warmWhite/90 border border-champagneGold/30 rounded-2xl px-4 py-3.5 text-sm focus:outline-none focus:border-champagneGold focus:ring-2 focus:ring-champagneGold/20 transition-all">
+                            </div>
+                            <div>
+                                <label class="text-xs font-bold uppercase tracking-wider block mb-1.5 text-deepNavy">Email</label>
+                                <input type="email" required placeholder="john@example.com" class="w-full bg-warmWhite/90 border border-champagneGold/30 rounded-2xl px-4 py-3.5 text-sm focus:outline-none focus:border-champagneGold focus:ring-2 focus:ring-champagneGold/20 transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="text-xs font-bold uppercase tracking-wider block mb-1.5 text-deepNavy">Subjek</label>
+                            <input type="text" required placeholder="Project Inquiry / Opportunity" class="w-full bg-warmWhite/90 border border-champagneGold/30 rounded-2xl px-4 py-3.5 text-sm focus:outline-none focus:border-champagneGold focus:ring-2 focus:ring-champagneGold/20 transition-all">
+                        </div>
+                        <div>
+                            <label class="text-xs font-bold uppercase tracking-wider block mb-1.5 text-deepNavy">Pesan</label>
+                            <textarea rows="4" required placeholder="Tuliskan pesan atau detail proyek Anda di sini..." class="w-full bg-warmWhite/90 border border-champagneGold/30 rounded-2xl px-4 py-3.5 text-sm focus:outline-none focus:border-champagneGold focus:ring-2 focus:ring-champagneGold/20 transition-all"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-deepNavy text-warmWhite font-bold py-4 rounded-2xl text-xs tracking-widest uppercase border border-champagneGold/40 hover:bg-champagneGold hover:text-deepNavy hover:shadow-glow transition-all duration-300">
+                            Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Modal -->
+    <!-- Scroll To Top Floating Button -->
+    <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-champagneGold text-deepNavy flex items-center justify-center shadow-2xl opacity-0 pointer-events-none transition-all duration-300 z-40 hover:scale-110">
+        <i class="fa-solid fa-arrow-up text-lg"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-deepNavy border-t border-champagneGold/20 py-8 text-center text-xs text-ivory/60">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© 2026 Andin Putri Wijayanti. All rights reserved.</p>
+            <p class="text-champagneLight/80 font-medium">Crafted with Precision, Elegance & Modern UX</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile Menu Toggle
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Scroll Back to Top Visibility
+            const backToTopBtn = document.getElementById('back-to-top');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                } else {
+                    backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                }
+            });
+        });
+
+        // Project Filter Function
+        function filterProjects(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.project-card');
+
+            buttons.forEach(btn => {
+                if (btn.dataset.category === category) {
+                    btn.classList.add('bg-deepNavy', 'text-warmWhite', 'border-champagneGold/40');
+                    btn.classList.remove('bg-ivory', 'text-deepNavy');
+                } else {
+                    btn.classList.remove('bg-deepNavy', 'text-warmWhite', 'border-champagneGold/40');
+                    btn.classList.add('bg-ivory', 'text-deepNavy');
+                }
+            });
+
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.type === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Modal Functions
+        function openModal(title, desc, imgSrc, tags) {
+            const modal = document.getElementById('project-modal');
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-desc').textContent = desc;
+            document.getElementById('modal-img').src = imgSrc;
+
+            const tagsContainer = document.getElementById('modal-tags');
+            tagsContainer.innerHTML = '';
+            tags.forEach(tag => {
+                const tagSpan = document.createElement('span');
+                tagSpan.className = 'text-xs bg-ivory border border-champagneGold/30 px-3 py-1 rounded-full font-bold text-deepNavy';
+                tagSpan.textContent = tag;
+                tagsContainer.appendChild(tagSpan);
+            });
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.firstElementChild.classList.remove('scale-95');
+                modal.firstElementChild.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('project-modal');
+            modal.firstElementChild.classList.remove('scale-100');
+            modal.firstElementChild.classList.add('scale-95');
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Copy Email Logic
+        function copyEmail() {
+            const emailText = document.getElementById('email-text').innerText;
+            const tempInput = document.createElement('input');
+            tempInput.value = emailText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            alert('Email berhasil disalin ke clipboard!');
+        }
+
+        // Form Submit Logic
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const msg = document.getElementById('success-msg');
+            msg.classList.remove('hidden');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
